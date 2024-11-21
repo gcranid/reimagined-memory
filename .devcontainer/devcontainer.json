@@ -23,7 +23,7 @@
       ]
     }
   },
-  "postCreateCommand": "npm i -g npm@latest && npm i -g yarn@latest && yarn install",
+  "postCreateCommand": "npm i -g npm@latest && npm i -g pnpm@latest && pnpm install",
   "hostRequirements": {
     "cpus": 4
   }
