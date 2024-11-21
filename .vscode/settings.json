@@ -59,7 +59,7 @@
   "files.enableTrash": true,
   "files.encoding": "utf8",
   "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": false,
+  "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "workbench.experimental.share.enabled": true,
   "workbench.localHistory.enabled": true,
