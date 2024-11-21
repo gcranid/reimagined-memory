@@ -5,8 +5,11 @@
  */
 
 import React from "react";
+import { storage } from "../../utils";
 
 import "../../assets/css/footer.css";
+
+const { saveToLocalStorage, getFromLocalStorage, clearFromLocalStorage } = storage;
 
 const Footer = () => {
   return (
