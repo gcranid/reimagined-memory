@@ -14,16 +14,23 @@ const { saveToLocalStorage, getFromLocalStorage, clearFromLocalStorage } =
   storage;
 
 const Footer = () => {
+  const handleReset = () => {
+    clearFromLocalStorage();
+    // Optionally, you might want to add some visual feedback to the user,
+    // like updating the input field or showing a message.
+  };
+
   return (
+    <footer className="footer-content">
     <div className="fixed p-4 bottom-0 left-0 right-0 text-center bg-zinc-950">
       <div>
         {/* heading */}
         <h1 className="text-xl text-gray-300 font-semibold text-muted-foreground mb-1">
           reimagined-memory...
         </h1>
-        <p className="mb-4 text-gray-300 text-muted-foreground">
+        {/* <p className="mb-4 text-gray-300 text-muted-foreground">
           Select a provider from the dropdown.
-        </p>
+        </p> */}
 
         {/* inputs */}
         <div>
@@ -39,12 +46,16 @@ const Footer = () => {
           <button className="bg-lime-500 text-black hover:bg-lime-800 hover:text-white text-xl font-semibold p-2 rounded-lg shadow-xl mr-16">
             SEND
           </button>
-          <button className="bg-red-500 text-black hover:bg-red-800 hover:text-white text-xl font-semibold p-2 rounded-lg shadow-xl mb-2">
+          <button
+            onClick={handleReset}
+            className="bg-red-500 text-black hover:bg-red-800 hover:text-white text-xl font-semibold p-2 rounded-lg shadow-xl mb-2"
+          >
             RESET
           </button>
         </div>
       </div>
     </div>
+    </footer>
   );
 };
 
