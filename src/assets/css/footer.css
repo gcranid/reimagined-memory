@@ -5,5 +5,8 @@
  */
 
 .footer-content {
-  font-family: "consolas";
+  position: fixed; /* Fixes the footer to the bottom of the viewport */
+  bottom: 0; /* Ensures it's at the bottom */
+  width: 100%; /* Full width */
+  z-index: 1000;
 }

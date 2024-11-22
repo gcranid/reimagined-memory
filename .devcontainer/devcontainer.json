@@ -2,11 +2,7 @@
   "name": "gcranid",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
   "features": {
-    "ghcr.io/devcontainers-community/npm-features/prettier:1": {},
-    "ghcr.io/warrenbuckley/codespace-features/sqlite:latest": {},
-    "ghcr.io/prulloac/devcontainer-features/ollama:1": {
-      "pull": "tinyllama"
-    }
+    "ghcr.io/devcontainers-community/npm-features/prettier:1": {}
   },
   "customizations": {
     "vscode": {
@@ -23,7 +19,7 @@
       ]
     }
   },
-  "postCreateCommand": "npm i -g npm@latest && npm i -g pnpm@latest && pnpm install",
+  "postCreateCommand": "npm i -g npm@latest && npm i -g yarn@latest && yarn install",
   "hostRequirements": {
     "cpus": 4
   }
