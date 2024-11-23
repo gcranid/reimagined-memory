@@ -13,6 +13,11 @@ import "../../assets/css/footer.css";
 const { saveToLocalStorage, getFromLocalStorage, clearFromLocalStorage } =
   storage;
 
+const handleClear = () => {
+  clearFromLocalStorage();
+  alert("Local Browser Storage Cleared");
+};
+
 const Footer = () => {
   const handleReset = () => {
     clearFromLocalStorage();
@@ -47,7 +52,11 @@ const Footer = () => {
             SEND
           </button>
           <button
+<<<<<<< HEAD
             onClick={handleReset}
+=======
+            onClick={handleClear}
+>>>>>>> dcc611f (5)
             className="bg-red-500 text-black hover:bg-red-800 hover:text-white text-xl font-semibold p-2 rounded-lg shadow-xl mb-2"
           >
             RESET
