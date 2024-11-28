@@ -29,8 +29,8 @@ const Footer = () => {
             reimagined-memory...
           </h1>
           {/* <p className="mb-4 text-gray-300 text-muted-foreground">
-          Select a provider from the dropdown.
-        </p> */}
+            Select a provider from the dropdown.
+          </p> */}
 
           {/* inputs */}
           <div>
