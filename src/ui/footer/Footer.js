@@ -4,56 +4,52 @@
  *
  */
 
-import React from "react";
-import { storage } from "../../utils";
-import logo from "../../assets/img/logo.svg";
+import React, { useState } from "react";
+// import { storage } from "../../utils";
+
+import chocy from "../../assets/img/chocy.svg";
+import send from "../../assets/img/send.svg";
+import reset from "../../assets/img/reset.svg";
+import prompt from "../../assets/img/prompt.svg";
 
 import "../../assets/css/footer.css";
 
-const { saveToLocalStorage, getFromLocalStorage, clearFromLocalStorage } =
-  storage;
+// const { getFromLocalStorage, clearFromLocalStorage } = storage;
 
 const Footer = () => {
-  const handleReset = () => {
+  /*const handleReset = () => {
     clearFromLocalStorage();
-    alert("Local Browser Storage Cleared!!!");
-  };
+    setStorageCleared(storageCleared);
+  }; */
 
   return (
-    <footer className="fixed p-1 bottom-0 left-0 right-0 text-center bg-zinc-950">
+    <footer className="fixed p-4 bottom-0 left-0 right-0 text-center bg-zinc-950">
       <div>
-        <img src={logo} className="footer-logo" alt="logo" />
-        <div>
-          {/* heading */}
-          <h1 className="text-xl text-gray-400 font-semibold text-muted-foreground mb-1">
-            reimagined-memory...
-          </h1>
-          {/* <p className="mb-4 text-gray-300 text-muted-foreground">
-            Select a provider from the dropdown.
-          </p> */}
-
-          {/* inputs */}
-          <div>
-            <input
-              type="text"
-              placeholder=" reimagined-memory..."
-              className="w-2/4 p-2 rounded-lg shadow-xl bg-zinc-800 text-white mb-4"
-            />
-          </div>
-
-          {/* buttons */}
-          <div>
-            <button className="bg-lime-500 text-black hover:bg-lime-800 hover:text-white text-xl font-semibold p-2 rounded-lg shadow-xl mr-16">
-              SEND
-            </button>
-            <button
-              onClick={handleReset}
-              className="bg-red-500 text-black hover:bg-red-800 hover:text-white text-xl font-semibold p-2 rounded-lg shadow-xl"
-            >
-              RESET
-            </button>
-          </div>
-        </div>
+        {/* buttons */}
+        <button
+          className="border border-white p-1 rounded-lg shadow-xl mr-2"
+          title="Send"
+          aria-label="Send"
+        >
+          {/* SEND */}
+          <img src={send} className="" alt="" />
+        </button>
+        <button
+          className="border border-white p-1 rounded-lg shadow-xl mr-2"
+          title="Reset"
+          aria-label="Reset"
+        >
+          {/* RESET */}
+          <img src={reset} className="" alt="" />
+        </button>
+        <button
+          className="border border-white p-1 rounded-lg shadow-xl"
+          title="Prompt"
+          aria-label="Prompt"
+        >
+          {/* PROMPT */}
+          <img src={prompt} className="" alt="" />
+        </button>
       </div>
     </footer>
   );

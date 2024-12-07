@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Set the output file
 output_file="contents.txt"
@@ -16,7 +16,7 @@ script_name=$(basename "$0")
 find ./src -type f ! -name "$script_name" ! -name "$output_file" \
     ! -name "*.bk" ! -name "*.jpg" ! -name "*.json" ! -name "*.config*" \
     ! -name "*LICENSE*" ! -name "*.git*" ! -name "*.eslint*" ! -name "*.md" \
-    ! -name "*.jpeg" ! -name "*.ico" ! -name "*.svg" ! -name "*.icns" \
+    ! -name "*.jpeg" ! -name "*.ico" ! -name "*.icns" \
     ! -name "*.png" ! -name "*.gif" ! -name "*.webp" | while read file; do
 
     # Add the divider
@@ -26,10 +26,10 @@ find ./src -type f ! -name "$script_name" ! -name "$output_file" \
     # echo "" >> "$output_file"
 
     # Write the file path between quotes to the output file
-    echo "/* $file */" >> "$output_file"
+    # echo "/* $file */" >> "$output_file"
 
     # Add a blank line for readability
-    echo "" >> "$output_file"
+    # echo "" >> "$output_file"
 
     # Write the content of the file to the output file
     cat "$file" >> "$output_file"

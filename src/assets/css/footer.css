@@ -4,12 +4,39 @@
  *
  */
 
-.footer-logo {
+.footer-logo-left {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   margin-left: 10px;
   margin-bottom: 10px;
+}
+
+.footer-logo-right {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.gradient-button {
+  background-image: linear-gradient(to bottom, #4caf50, #ff9800, #ff69b4);
+  background-size: 100% 200%;
+  /* border-radius: 20px; */
+  transition: background-position 0.3s ease-in-out;
+}
+
+.gradient-button:hover {
+  background-position: 100% 100%;
+}
+
+.button-container {
+  background-image: linear-gradient(to bottom, #4caf50, #ff9800, #ff69b4);
+  position: relative;
+  align-content: center;
 }
