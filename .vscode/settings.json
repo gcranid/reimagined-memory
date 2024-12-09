@@ -80,5 +80,6 @@
   "workbench.editor.showIcons": true,
   "window.titleSeparator": "   -   ",
   "explorer.excludeGitIgnore": false,
-  "search.showLineNumbers": true
+  "search.showLineNumbers": true,
+  "window.autoDetectColorScheme": true
 }
